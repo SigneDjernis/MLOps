@@ -6,7 +6,12 @@ from model import MyAwesomeModel
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def evaluate(model_checkpoint: str) -> None:
-    """Evaluate a trained model."""
+    """Evaluate a trained model.
+    Inputs:
+        model_checkpoint: path to the model checkpoint
+    Outputs:
+        None
+    """
     print("Evaluating like my life depended on it")
     print(model_checkpoint)
 
