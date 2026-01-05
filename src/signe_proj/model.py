@@ -1,4 +1,5 @@
 from torch import nn
+import torch
 
 class MyAwesomeModel(nn.Module):
     """Basic Neural Network with 1 hidden layer."""
@@ -22,3 +23,13 @@ class MyAwesomeModel(nn.Module):
         x = self.sigmoid(x)
         x = self.output(x)
         return self.softmax(x)
+
+if __name__ == "__main__":
+    model = MyAwesomeModel()
+    print(f"Model architecture: {model}")
+    print(f"Number of parameters: {sum(p.numel() for p in model.parameters())}")
+
+    dummy_input = torch.randn(1, 1, 28, 28)
+    dummy_input = dummy_input.view(-1, 784)  # Flatten the input
+    output = model(dummy_input)
+    print(f"Output shape: {output.shape}")
