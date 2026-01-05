@@ -1,6 +1,7 @@
 from torch import nn
 import torch
 
+
 class MyAwesomeModel(nn.Module):
     """Basic Neural Network with 1 hidden layer."""
 
@@ -23,6 +24,7 @@ class MyAwesomeModel(nn.Module):
         x = self.sigmoid(x)
         x = self.output(x)
         return self.softmax(x)
+
 
 if __name__ == "__main__":
     model = MyAwesomeModel()

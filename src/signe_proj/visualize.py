@@ -7,6 +7,7 @@ from sklearn.manifold import TSNE
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+
 def visualize(model_checkpoint: str, figure_name: str = "embeddings.png") -> None:
     """Visualize model predictions."""
     model: torch.nn.Module = MyAwesomeModel().to(DEVICE)
