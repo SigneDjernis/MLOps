@@ -1,0 +1,57 @@
+_wandb:
+    value:
+        cli_version: 0.23.1
+        e:
+            bxgbsqky9yzlskoyh5svcj8w28eqna7p:
+                apple:
+                    ecpuCores: 4
+                    gpuCores: 10
+                    memoryGb: 16
+                    name: Apple M2
+                    pcpuCores: 4
+                    ramTotalBytes: "17179869184"
+                cpu_count: 8
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "494384795648"
+                        used: "407056289792"
+                email: signedjernis@gmail.com
+                executable: /Users/signeolsen/Desktop/MLOps/.venv/bin/python3
+                git:
+                    commit: 709588879bff5bf4d2da71dd23e517c10cfba697
+                    remote: https://github.com/SigneDjernis/MLOps.git
+                host: MacBook-Pro-3.local
+                memory:
+                    total: "17179869184"
+                os: macOS-15.6.1-arm64-arm-64bit
+                program: -m src.signe_proj.train
+                python: CPython 3.11.4
+                root: /Users/signeolsen/Desktop/MLOps
+                startedAt: "2026-01-12T11:54:00.470384Z"
+                writerId: bxgbsqky9yzlskoyh5svcj8w28eqna7p
+        m: []
+        python_version: 3.11.4
+        t:
+            "1":
+                - 1
+                - 5
+                - 53
+            "2":
+                - 1
+                - 5
+                - 53
+            "3":
+                - 16
+            "4": 3.11.4
+            "5": 0.23.1
+            "8":
+                - 2
+            "12": 0.23.1
+            "13": darwin-arm64
+batch_size:
+    value: 32
+epochs:
+    value: 5
+lr:
+    value: 0.001
