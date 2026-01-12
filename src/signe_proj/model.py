@@ -20,6 +20,8 @@ class MyAwesomeModel(nn.Module):
     def forward(self, x):
         """Forward pass through the network, returns the output logits."""
         # Pass the input tensor through each of our operations
+        # flatten the input tensor
+        x = x.view(x.size(0), -1)  # flatten the images
         x = self.hidden(x)
         x = self.sigmoid(x)
         x = self.output(x)

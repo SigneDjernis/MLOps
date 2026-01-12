@@ -1,9 +1,9 @@
 from signe_proj.model import MyAwesomeModel
 import torch
+import pytest
 
 def test_model():
     model = MyAwesomeModel()
     x = torch.randn(1, 1, 28, 28)
-    x_flat = x.view(x.size(0), -1)  # flatten the images
-    y = model(x_flat)
+    y = model(x)
     assert y.shape == (1, 10)

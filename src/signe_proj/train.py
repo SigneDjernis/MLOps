@@ -33,8 +33,7 @@ def train(lr: float = 0.001, batch_size: int = 32, epochs: int = 5) -> None:
         for i, (img, target) in enumerate(train_dataloader):
             img, target = img.to(DEVICE), target.to(DEVICE)
             optimizer.zero_grad()
-            img_flat = img.view(img.size(0), -1)  # flatten the images
-            y_pred = model(img_flat)
+            y_pred = model(img)
             loss = loss_fn(y_pred, target)
             loss.backward()
             optimizer.step()

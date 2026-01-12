@@ -23,8 +23,7 @@ def visualize(model_checkpoint: str, figure_name: str = "embeddings.png") -> Non
     with torch.inference_mode():
         for batch in torch.utils.data.DataLoader(test_dataset, batch_size=32):
             images, target = batch
-            images_flat = images.view(images.size(0), -1).to(DEVICE)
-            predictions = model(images_flat)
+            predictions = model(images)
             embeddings.append(predictions)
             targets.append(target)
         embeddings = torch.cat(embeddings).numpy()

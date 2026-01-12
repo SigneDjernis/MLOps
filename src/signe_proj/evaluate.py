@@ -26,8 +26,7 @@ def evaluate(model_checkpoint: str) -> None:
     correct, total = 0, 0
     for img, target in test_dataloader:
         img, target = img.to(DEVICE), target.to(DEVICE)
-        img_flat = img.view(img.size(0), -1)
-        y_pred = model(img_flat)
+        y_pred = model(img)
         correct += (y_pred.argmax(dim=1) == target).float().sum().item()
         total += target.size(0)
     print(f"Test accuracy: {correct / total}")
